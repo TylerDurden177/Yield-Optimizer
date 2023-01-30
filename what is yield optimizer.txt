@@ -1,0 +1,7 @@
+The yield optimizer protocol is a DeFi solution designed to maximize the potential earnings for end-users by interacting with one or more other DeFi protocols. The protocol operates by utilizing smart contracts, which allows for a composable experience with other DeFi protocols.
+
+The capital pools within the yield optimizer are automatically managed to generate yield based on opportunities present in the market. The protocol socializes gas costs, automates the yield generation and rebalancing process, and automatically shifts capital as opportunities arise. This means that end-users do not need to have a deep understanding of the underlying protocols involved or DeFi in general.
+
+The yield optimizer represents a passive-investing strategy that allows end-users to benefit from the opportunities present in the DeFi market without needing to actively manage their investments. The protocol continuously scans the market for the best yield opportunities and adjusts the capital allocation accordingly.
+
+In summary, the yield optimizer protocol offers end-users a simple and effective way to participate in the DeFi market and earn yield on their investments. The protocol is designed to be user-friendly, with smart contracts automating the complex processes involved and minimizing the need for manual intervention.

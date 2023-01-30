@@ -1,0 +1,7 @@
+The code defines a smart contract for a yield optimizer that interacts with other DeFi protocols to maximize the potential earnings for an end-user. The yield optimizer smart contract manages a mapping of yield farming opportunities and uses a struct to store information about each opportunity. The contract has functions to add new yield opportunities and to invest in a selected opportunity.
+
+When a new yield opportunity is added, the input is validated for risk level, return rate, minimum investment, and maximum investment. If the input is valid, the information about the opportunity is added to the mapping of yield opportunities.
+
+When an end-user wants to invest, the investment amount is validated against the minimum and maximum investment for the selected yield opportunity. The expected return is calculated based on the return rate and the investment amount. Then, a new investment smart contract is created to manage the individual investment. The investment funds are transferred to the new investment contract.
+
+The investment contract stores information about the investment, including the name of the yield opportunity, the investment amount, expected return, start time, and end time.
