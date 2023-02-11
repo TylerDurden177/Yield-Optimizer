@@ -1,4 +1,4 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.8.0;
 
 import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol";
 
@@ -80,4 +80,32 @@ contract Investment {
     uint256 public expectedReturn;
     uint256 public startTime;
     uint256 public endTime;
-    bool
+    bool256 public invested; 
+
+constructor(string memory _name, uint256 _amount, uint256 _expectedReturn, uint256 _minInvestmentTime) public {
+    name = _name;
+    amount = _amount;
+    expectedReturn = _expectedReturn;
+    startTime = now;
+    endTime = startTime.add(_minInvestmentTime);
+    invested = true;
+}
+
+// Receive funds from the investor
+function receiveFunds() external payable {
+    require(!invested, "Funds have already been invested");
+    invested = true;
+}
+
+// Withdraw funds after the investment period has ended
+function withdraw() public {
+    require(now >= endTime, "Investment period has not ended");
+    msg.sender.transfer(expectedReturn);
+}
+
+// Cancel the investment and return the funds to the investor
+function cancel() public {
+    require(now < endTime, "Investment period has already ended");
+    msg.sender.transfer(amount);
+}
+}
